@@ -4,7 +4,7 @@ import random
 import time
 from multiprocessing import Queue
 
-__author__ = 'wanghaolong'
+
 
 def write(q):
     with open('test.txt') as f:
