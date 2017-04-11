@@ -13,6 +13,13 @@ def func(msg):
     print "end"
     return "done" + msg
 
+
+def foo(i,a):
+    print 'say hi',i,a
+
+
+
+
 def do(msg):
     maps={}
     name=multiprocessing.current_process().name
@@ -59,7 +66,11 @@ if __name__=='__main__':
 ##################################################################################
 
 ###################################################################################
-    manyProceResust()
+
+    for i in range(10):
+        p = Process(target=foo,args=(i,i,))
+        p.start()
+    # manyProceResust()
     # # manyProce()
     # starttime=time.time()
     # # manyProcMap()
